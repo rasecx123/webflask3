@@ -1,0 +1,12 @@
+body {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+
+    font-family: 'Poppins', sans-serif;
+}
+
