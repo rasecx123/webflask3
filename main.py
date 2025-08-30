@@ -33,6 +33,10 @@ def internal_error(e):
 def index():
     return render_template("home.html")
 
+@app.route("/faqs")
+def faqs():
+    return render_template("faqs.html")
+
 @app.route('/test', methods=('GET', 'POST'))
 def test():
     form = TestForm()
