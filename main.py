@@ -7,6 +7,8 @@ import os
 app = Flask(__name__)
 app.config.from_object(Config)
 
+visit_count = 0
+
 #Headers de Seguridad
 @app.after_request
 def set_secure_headers(response):
@@ -31,7 +33,9 @@ def internal_error(e):
 
 @app.route("/")
 def index():
-    return render_template("home.html")
+    global visit_count
+    visit_count += 1
+    return render_template("home.html", count=visit_count)
 
 @app.route("/faqs")
 def faqs():
