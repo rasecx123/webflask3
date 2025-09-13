@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestra ubicacion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">  
+</head>
+<body>
+  <div class="container mt-4">
+    <h1>Nuestra Ubicacion</h1>
+    <p>Aqui puedes encontrarnos:</p>
+
+    <div class="ratio ratio-16x9">
+      <iframe
+        src="https://maps.app.goo.gl/91QqzXY8xpqKvP3cA"
+        width="600"
+        height="450"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>  
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-3"> Volver al inicio </a>
+  </div>
+</body>
