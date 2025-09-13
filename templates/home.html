@@ -17,10 +17,14 @@
         <form action="/faqs" method="get">
             <button type="submit" class="btn btn-primary btn-lg">FAQ's</button>
         </form>
+        <form action="{{ url_for('ubicacion') }}" method="get">
+            <button type="submit" class="btn btn-success btn-lg">Ver Ubicación</button>
+        </form>
         <p>Visitas totales: {{ count }}</p>
     </div>
 </body>
 
 </html>
+
 
 
