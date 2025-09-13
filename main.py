@@ -41,6 +41,11 @@ def index():
 def faqs():
     return render_template("faqs.html")
 
+@app.route("/ubicacion")
+def ubicacion():
+    return render_template("ubicacion.html")
+
+
 @app.route('/test', methods=('GET', 'POST'))
 def test():
     form = TestForm()
