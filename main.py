@@ -12,15 +12,17 @@ visit_count = 0
 #Headers de Seguridad
 @app.after_request
 def set_secure_headers(response):
-    response.headers['X-Frame-Options'] = 'DENY'
+    response.headers['X-Frame-Options'] = 'SAMEORIGIN'  
     response.headers['Content-Security-Policy'] = (
         "default-src 'self'; "
-        "style-src 'self' https://cdn.jsdelivr.net;"
-        "script-src 'self' https://cdn.jsdelivr.net;"
+        "style-src 'self' https://cdn.jsdelivr.net; "
+        "script-src 'self' https://cdn.jsdelivr.net; "
+        "frame-src https://www.google.com https://www.google.com.mx;"  # 👈 PERMITIR iframes de Google
     )
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['X-XSS-Protection'] = '1; mode=block'
     return response
+
 
 #Errores Personalizados
 @app.errorhandler(404)
